@@ -11,6 +11,7 @@
 		EF30C515230C992300E5D9BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF30C513230C992300E5D9BA /* Main.storyboard */; };
 		EF30C517230C992400E5D9BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF30C516230C992400E5D9BA /* Assets.xcassets */; };
 		EF30C51A230C992400E5D9BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF30C518230C992400E5D9BA /* LaunchScreen.storyboard */; };
+		EF30C527230CA5B200E5D9BA /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30C526230CA5B200E5D9BA /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		EF30C516230C992400E5D9BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF30C519230C992400E5D9BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF30C51B230C992400E5D9BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF30C526230CA5B200E5D9BA /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		EF30C525230C9A2500E5D9BA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EF30C526230CA5B200E5D9BA /* Book.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF30C527230CA5B200E5D9BA /* Book.swift in Sources */,
 				EF30C510230C992300E5D9BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
