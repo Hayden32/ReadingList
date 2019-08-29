@@ -37,12 +37,16 @@ class BookDetailViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-     guard let bookTitle = bookTextField.text,
-        let reasonToRead = reasonToReadTextView.text,
-        bookTitle != "" && reasonToRead != "" else { return }
+        guard let bookTitle = bookTextField.text,
+            let reasonToRead = reasonToReadTextView.text,
+            bookTitle != "" && reasonToRead != "" else { return }
         
-        title = book?.title
-        bookTextField.text = book?.title
-        reasonToReadTextView.text = book?.reasonToRead
+        if let book = book {
+            bookController?.update(book: book, title: bookTitle, reasonToRead: reasonToRead)
+        } else {
+            bookController?.createBook(title: bookTitle, reasonToRead: reasonToRead)
+        }
+        navigationController?.popViewController(animated: true)
     }
+    
 }
