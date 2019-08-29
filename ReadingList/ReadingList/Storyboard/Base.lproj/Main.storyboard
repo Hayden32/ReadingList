@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WQl-5L-RaA" customClass="BookTableViewCell" customModule="ReadingList" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCell" id="WQl-5L-RaA" customClass="BookTableViewCell" customModule="ReadingList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WQl-5L-RaA" id="j3y-6Z-bs1">
@@ -58,7 +58,7 @@
                                 <connections>
                                     <outlet property="bookLabel" destination="Y7E-mj-3la" id="qTv-1C-IgC"/>
                                     <outlet property="hasBeenReadButton" destination="oQL-kG-jEs" id="3SU-E6-zKb"/>
-                                    <segue destination="qQs-mS-4kv" kind="show" identifier="BookDetailVC" id="Zyu-q7-mkO"/>
+                                    <segue destination="qQs-mS-4kv" kind="show" identifier="toBookDetailVC" id="Zyu-q7-mkO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -70,7 +70,7 @@
                     <navigationItem key="navigationItem" title="Reading List" id="A1F-Vk-cYP">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="oER-V9-kfw">
                             <connections>
-                                <segue destination="qQs-mS-4kv" kind="show" identifier="toBookDetail" id="3iO-hU-sHu"/>
+                                <segue destination="qQs-mS-4kv" kind="show" identifier="addBookDetail" id="3iO-hU-sHu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -154,6 +154,6 @@
         <image name="checked" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3iO-hU-sHu"/>
+        <segue reference="Zyu-q7-mkO"/>
     </inferredMetricsTieBreakers>
 </document>

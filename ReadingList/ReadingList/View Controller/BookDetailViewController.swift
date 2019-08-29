@@ -9,6 +9,9 @@
 import UIKit
 
 class BookDetailViewController: UIViewController {
+    
+    var bookController: BookController?
+    var book: Book?
 
     // MARK: - IBoutlets
     @IBOutlet weak var bookTextField: UITextField!
