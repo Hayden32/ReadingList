@@ -20,6 +20,13 @@ class BookDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        reasonToReadTextView.clipsToBounds = false
+        reasonToReadTextView.layer.shadowOpacity = 0.4
+        reasonToReadTextView.layer.shadowOffset = CGSize(width: 1, height: 1)
+        
+        bookTextField.layer.shadowOpacity = 0.4
+        bookTextField.layer.shadowOffset = CGSize(width: 1, height: 1)
+        
         updateViews()
     }
     

@@ -13,8 +13,10 @@ class ReadingListTableViewController: UITableViewController, BookTableViewCellDe
     // MARK: - Properties
     var bookController = BookController()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
     }
     
     // MARK: - Methods
