@@ -10,7 +10,12 @@ import UIKit
 
 class BookTableViewCell: UITableViewCell {
     
-    var book: Book?
+    var book: Book? {
+        didSet {
+            updateViews()
+        }
+    }
+    weak var delegate: BookTableViewCellDelegate?
     
     // MARK: - IBoutlets
     @IBOutlet weak var bookLabel: UILabel!
@@ -22,7 +27,7 @@ class BookTableViewCell: UITableViewCell {
         guard let book = book else { return }
         bookLabel.text = book.title
         
-        let image = book.hasBeenRead ? #imageLiteral(resourceName: "checked") : #imageLiteral(resourceName: "unchecked")
+        let image = book.hasBeenRead ? #imageLiteral(resourceName: "checked") : #imageLiteral(resourceName: "unchecked.png")
         
         hasBeenReadButton.setImage(image, for: .normal)
     }
@@ -30,6 +35,6 @@ class BookTableViewCell: UITableViewCell {
     
     // MARK: - IBActions
     @IBAction func hasBeenReadButtonTapped(_ sender: Any) {
-        
+        delegate?.toggleHasBeenRead(for: self)
     }
 }
