@@ -12,11 +12,11 @@ class ReadingListTableViewController: UITableViewController, BookTableViewCellDe
     
     // MARK: - Properties
     var bookController = BookController()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     // MARK: - Methods
     
     private func bookFor(indexPath: IndexPath) -> Book {
@@ -38,12 +38,12 @@ class ReadingListTableViewController: UITableViewController, BookTableViewCellDe
     }
     
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 2
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if section == 0 {
@@ -52,15 +52,15 @@ class ReadingListTableViewController: UITableViewController, BookTableViewCellDe
             return bookController.unreadBooks.count
         }
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as? BookTableViewCell else { return UITableViewCell() }
-
+        
         cell.delegate = self
         
         let book = bookFor(indexPath: indexPath)
-
+        
         cell.book = book
         
         return cell
